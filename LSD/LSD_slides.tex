@@ -1,0 +1,137 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,
+mathtools,mathrsfs}
+\usepackage{physics}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\useoutertheme[subsection=false]{miniframes}
+
+\addtobeamertemplate{block example begin}{%
+    \setlength{\textwidth}{0.8\textwidth}
+}{}
+
+\usepackage[style=apa, backend=biber, natbib]{biblatex}
+\addbibresource{references.bib}
+
+
+\title[LSD Analysis]{Liquidity Unleashed: A Research-driven Analysis of Post-Shanghai LSDs}
+\subtitle{ETHChicago 2023}
+\author[Mingxuan He]{Mingxuan He\\
+mingxuanh.eth}
+
+
+\institute[]{
+Phoenix graduate scholar (computational economics), University of Chicago\\
+Research fellow, Nethermind
+}
+
+
+\date{\today}
+
+
+% table of contents page before each section (optional)
+% \AtBeginSection[]
+% {
+%   \begin{frame}
+%     \frametitle{Table of Contents}
+%     \tableofcontents[currentsection]
+%   \end{frame}
+% }
+
+
+\begin{document}
+
+% title page
+\begin{frame}
+\titlepage  
+\end{frame}
+
+% table of contents
+% \begin{frame}
+% \frametitle{Table of Contents}
+% \tableofcontents
+% \end{frame}
+
+
+%----------------
+\section{Introduction}
+\begin{frame}{Ethereum Staking Basics}
+\begin{itemize}
+    \item Consensus layer rewards: Attestation, block proposal, sync committee
+    \item Execution layer rewards: Txn fee (EIP-1559), MEV
+\end{itemize}
+data: \href{https://dune.com/LidoAnalytical/lido-execution-layer-rewards}{Rewards chart}
+\end{frame}
+
+\begin{frame}{The Merge and Shapella Upgrade}
+    
+\end{frame}
+
+\begin{frame}{LSDs in 2023}
+    Data: \href{https://dune.com/hildobby/eth2-staking}{Dune Analytics}
+\end{frame}
+
+
+%----------------
+\section{Economic Analysis}
+\begin{frame}{Liquid Staking Pools as Banks}
+    \centering
+    % use columns
+    \begin{tabular}{|c|c|c|}
+        \hline
+         & Banks & Liquid Staking Pools \\
+        \hline
+        Invests in & Loans & Beacon Chain \\
+        \hline
+        Deposits & Deposits & ETH Deposits \\
+        \hline
+    \end{tabular}
+\end{frame}
+
+\begin{frame}{Supply and Demand Analysis}
+    
+\end{frame}
+
+\begin{frame}{How Liquid are LSDs, Really?}
+    Introducing quantitative measures of liquidity\\
+    queues
+\end{frame}
+
+
+\begin{frame}{Risks}
+    \begin{itemize}
+        \item Liquidity risk: e.g. CRV exploit (this July)
+        \item Price risk: e.g. ETH price drop
+        \item Bank runs
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{More Risks}
+    \begin{itemize}
+        \item APR drop
+        \item Inflationary ETH
+    \end{itemize}
+\end{frame}
+
+%----------------
+\section{Research Insights}
+
+\begin{frame}{LSD Risk Simulations}
+    
+\end{frame}
+
+\section*{}
+
+\begin{frame}[allowframebreaks]{References}
+    \nocite{*}
+    \printbibliography
+\end{frame}
+
+
+\end{document}

@@ -1,0 +1,14 @@
+\frametitle{Step 4: Calibration and estimation}
+Aim: Assigning values to parameters and initial conditions in order to \underline{reproduce real-world behavior}.
+
+    \bigskip
+
+    Methods:
+    \begin{itemize}
+        \item Direct observation from data / protocol parameters\\
+        e.g. 5\% inflation rate on token, 15\% node commission
+        \item Statistical estimation (minimize distance from real data)\\
+        e.g. monthly new users, daily ETH prices
+        \item Meta-modeling
+    \end{itemize}
+    For a list of data sources and tools for on-chain analytics, see \href{https://sites.google.com/view/mingxuanhe/resources}{\underline{sites.google.com/view/mingxuanhe/resources}}
