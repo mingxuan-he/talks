@@ -23,7 +23,7 @@ mathtools,mathrsfs}
 
 
 \title[LSD Analysis]{Liquidity Unleashed: A Research-driven Analysis of Post-Shanghai LSDs}
-\subtitle{ETHChicago 2023}
+\subtitle{Science of Blockchain Conference - DFS Forum}
 \author[Mingxuan He]{
     Mingxuan He\\ 
     mingxuanh.eth
@@ -132,7 +132,7 @@ Research fellow, Nethermind
 
 %----------------
 \section[Economic Analysis]{Economic \& Financial Risk Analysis of LSDs}
-\begin{frame}{Liquid Staking Pools as Banks}
+\begin{frame}{Liquid Staking Protocols as Banks}
 
     \footnotemark Banks are financial intermediaries which create liquidity by:
 
@@ -183,20 +183,30 @@ Research fellow, Nethermind
     \end{figure}
 \end{frame}
 
-\begin{frame}{LSD Bank Run}
-    Bank runs are typically triggered by 1. sudden increase in demand for liquidity 2. expectation of insolvency.\\  
+\begin{frame}{Are LSD Bank Runs Possible?}
+    Bank runs are typically triggered by 1. sudden increase in demand for liquidity 2. expectation of protocol insolvency.\\  
     \bigskip
-    What could trigger a bank run on LSDs?
     \begin{itemize}
         \item Liquidity shortage: e.g. CRV exploit July 2023 where multiple liquidity pools were drained
         \item ETH price drop
         \item Regulatory crackdown: e.g. SEC deems LSDs as securities
-        \item Large-scale slashing of validators
-        \item Bugs/exploits/hacks causing insolvency
+        \item Large-scale slashing or penalty of validators
+        \item Bugs/exploits/hacks stealing protocol funds
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Withdrawl of Staked ETH}
+
+\begin{frame}{During a LSD Bank Run:}
+    Two main methods of converting LSDs back to ETH:
+    \begin{itemize}
+        \item Direct redemption from protocol (deposit pool / POL)
+        \item Through DEX pools/aggregators
+    \end{itemize}
+    \bigskip
+    What happens after these run out?\\
+\end{frame}
+
+\begin{frame}{Withdrawing Staked ETH from Validators}
     \begin{itemize}
         \item Step 1: Exit queue -- only 10 validators can exit per epoch ($\approx$2225 validators or 0.5\% circulating supply per day).
         \item Step 2: Withdrawl queue -- same queue with partial withdrawls but is processed much slower
@@ -209,22 +219,23 @@ Research fellow, Nethermind
     https://notes.ethereum.org/@launchpad/withdrawals-faq
 \end{frame}
 
-
-\begin{frame}{Where LSD Liquidity Exist}
-    LSD liquidity in DEXes
-    LSD liquidity in protocols
+\begin{frame}{Protocol Response Mechanisms}
+    \begin{itemize}
+        \item Pause withdrawals (e.g. Lido's Bunker Mode)
+        \item Sell protocol assets (e.g. gov tokens) !!Might cause self-fulfilling prophecy!!
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Systemic Risks}
     \begin{itemize}
-        \item Centralization of stake: Nethermind and Lido are collaborating to solve this!
-        \item APR drop from overstaking
-        \item Inflationary ETH
+        \item Centralization of stake (esp. Lido): Nethermind Research and Lido are collaborating to solve this! Also DVT
+        \item APR drop from excessive staking (block rewards do not scale linearly with ETH staked)
+        \item ETH supply inflation if staking $>>$ usage (ETH minted $>>$ burned by EIP-1559)
     \end{itemize}
 \end{frame}
 
 %----------------
-\section[Research Insights]{The Latest in LSD Research}
+\section[Rocket Pool Case Study]{Rocket Pool Case Study}
 
 \begin{frame}{Rocket Pool Agent-Based Model \& Simulation}
     I've been building an agent-based simulation model for Rocket Pool to study and improve their protocol design. Areas I focused on include:\\
@@ -235,19 +246,24 @@ Research fellow, Nethermind
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Thank You!}
-    Connect with me:\\ 
-    \begin{itemize}
-        \item Check out \href{https://www.mingxuanhe.xyz/}{mingxuanhe.xyz} for more research projects on empirical DeFi, tokenomics design \& optimization, and computational methods
-        \item Twitter: \href{https://twitter.com/MingXDynasty}{@MingXDynasty}
-        \item Telegram: \href{https://t.me/mingxdynasty}{@MingXDynasty}
-        \item Linkedin: \href{https://www.linkedin.com/in/mingxuanhe/}{Mingxuan He}
-    \end{itemize}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/Rocketpool tokenomics.png}
+    \end{figure}
+\end{frame}
 
+\begin{frame}{Thank You!}
+    Connect with me on Twitter/Telegram @MingXDynasty, and Linkedin!\\ 
     \bigskip
-    
-    Support my community-funded research grant on Gitcoin: \\
-    \href{https://explorer.gitcoin.co/\#/round/10/0xc5fdf5cff79e92fac1d6efa725c319248d279200/0xc5fdf5cff79e92fac1d6efa725c319248d279200-0}{\underline{Gitcoin Grants Explorer}}
+    \begin{itemize}
+        \item Check out \href{https://www.mingxuanhe.xyz/}{\underline{mingxuanhe.xyz}} for more research in DeFi \& cryptoeconomics
+        % \item Support my community-funded 
+        % \href{https://explorer.gitcoin.co/\#/round/10/0xc5fdf5cff79e92fac1d6efa725c319248d279200/0xc5fdf5cff79e92fac1d6efa725c319248d279200-0}{\underline{research grant on Gitcoin}}
+        \item I'm on the job market for 2024!
+ 
+    \end{itemize}
+   
 
 \end{frame}
 
