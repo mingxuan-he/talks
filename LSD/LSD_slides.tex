@@ -36,7 +36,7 @@ Research fellow, Nethermind
 }
 
 
-\date{\today}
+\date{Sep 1, 2023}
 
 
 % table of contents page before each section (optional)
@@ -64,7 +64,7 @@ Research fellow, Nethermind
 
 
 %----------------
-\section[Introduction]{Introduction to Ethereum Staking \& LSDs}
+\section[Introduction]{Introduction to Ethereum Staking \& Liquid Staking}
 \begin{frame}{History of Ethereum Staking}
 
     \begin{itemize}
@@ -112,8 +112,8 @@ Research fellow, Nethermind
 \begin{frame}{Liquid Staking Derivatives (LSDs)}
     ERC-20 tokens that represent ETH tokens locked in PoS contracts. 
     \begin{itemize}
-        \item Benefits of LSD: yields staking rewards \& has liquidity
-        \item Liquid use cases: borrowing/lending, trading portfolio collateral, etc.
+        \item Benefits: yields staking rewards \& has liquidity
+        \item Use cases: borrowing/lending, trading portfolio collateral, etc.
         \item LSDs are redeemable for ETH at any time
         \item Most LSDs accrue rewards automatically i.e. \textbf{holding LSDs is equivalent to staking ETH in the pool}
     \end{itemize}
@@ -122,6 +122,7 @@ Research fellow, Nethermind
 \end{frame}
 
 \begin{frame}{LSDs saw huge growth after Shapella}
+    Currently LSDs are the \#1 DeFi sector and Lido is the \#1 DeFi protocol by TVL.
     \begin{figure}
         \centering
         \includegraphics[width=0.8\textwidth]{figures/lsd_2023.png}
@@ -144,7 +145,7 @@ Research fellow, Nethermind
     Similarly, LSD protocols create liquidity by:
     \begin{itemize}
         \item Gathering liquid funds (ETH) as liabilities
-        \item Holding in illiquid investment projects (Ethereum staking) as assets
+        \item Holding illiquid investment projects (Ethereum staking) as assets
     \end{itemize}
 
     % % use columns
@@ -261,16 +262,19 @@ Research fellow, Nethermind
         \hline
         &\text{Total Liquidity} & 45,445\Xi\\
     \end{align*}
-    This is only 5\% of rETH supply (902,768$\Xi$), or 4\% if not counting other LSDs as liquidity.
+    This is only 5\% of rETH supply issued (902,768$\Xi$), or 4\% if not counting other LSDs as liquidity.\\
+    v.s. US banks 10\% reserve requirement + Fed loans available
 \end{frame}
 
 \begin{frame}{Rocket Pool Agent-Based Model \& Simulation}
-    I've been building an agent-based simulation model for Rocket Pool to study and improve their protocol design. Areas I focused on include:\\
+    Together with Joel Kahil at Nethermind, I've been building an agent-based simulation model for Rocket Pool to study and improve their protocol design. We focus on:\\
     \begin{itemize}
         \item rETH and RPL tokenomics
         \item Behavior of node operators
-        \item Response to external risks
+        \item Response to external shocks
+        \item Bank run simulation
     \end{itemize}
+    We plan to use the model to evaluate several proposed changes in RPL's tokenomics by the protocol DAO. Stay tuned for more updates!
 \end{frame}
 
 \begin{frame}
@@ -284,7 +288,7 @@ Research fellow, Nethermind
     Connect with me on Twitter/Telegram @MingXDynasty, and Linkedin!\\ 
     \bigskip
     \begin{itemize}
-        \item Check out \href{https://www.mingxuanhe.xyz/}{\underline{mingxuanhe.xyz}} for more research in DeFi \& cryptoeconomics
+        \item Check out \href{https://www.mingxuanhe.xyz/}{\underline{mingxuanhe.xyz}} for more research in DeFi \& tokenomics
         % \item Support my community-funded 
         % \href{https://explorer.gitcoin.co/\#/round/10/0xc5fdf5cff79e92fac1d6efa725c319248d279200/0xc5fdf5cff79e92fac1d6efa725c319248d279200-0}{\underline{research grant on Gitcoin}}
         \item I'm on the job market for 2024!
