@@ -166,17 +166,21 @@ Research fellow, Nethermind
 \end{frame}
 
 \begin{frame}{Step 1: Build a flow chart}
-    A flow chart is the best way to start modeling complex systems like DeFi protocols. Be sure to include:
+    A flow chart is the best way to start modeling complex systems like Web3 protocols. Be sure to include:
     \begin{itemize}
         \item Agent-agent interactions
         \item Agent-protocol interactions
         \item Flow of funds / native tokens
     \end{itemize}
-    Recommended tool: Draw.io (open source)\\
+    
     \begin{figure}
         \centering
-        \includegraphics[width=\textwidth]{figures/uni_flowchart.jpg}
+        \includegraphics[width=0.8\textwidth]{figures/uni_flowchart.jpg}
     \end{figure}
+
+    \begin{block}{Excercise}
+        Draw a flowchart for your selected project. Freehand/\href{https://www.drawio.com/example-diagrams}{Draw.io}
+    \end{block}
 \end{frame}
 
 \begin{frame}{Mesa}
@@ -193,7 +197,7 @@ Research fellow, Nethermind
 
 \begin{frame}[fragile]{Step 2: Create agent classes}
     \begin{columns}
-        \column{0.5\textwidth}
+        \column{0.45\textwidth}
         \begin{block}{Code Structure}
             \begin{lstlisting}[language=Python, basicstyle=\footnotesize, xleftmargin=-16pt, columns=fullflexible]
     class TestAgent(mesa.Agent):
@@ -206,7 +210,7 @@ Research fellow, Nethermind
         self.attr_Y = 0
         
       def step(self):
-        # observe state and perform actions
+        # observe state, perform actions
       
       def action_name(self, args):
         # single action function
@@ -214,12 +218,16 @@ Research fellow, Nethermind
     \end{lstlisting}
         \end{block}
 
-        \column{0.5\textwidth}
+        \column{0.45\textwidth}
         \begin{itemize}
             \item Subclass \textit{mesa.Agent}
             \item Define \textbf{attributes} and \textbf{actions}.
             \item Define a \textbf{step} (policy) function
         \end{itemize}
+        \bigskip
+        \begin{block}{Exercise}
+            Write pseudo-code for \textbf{1} agent class.
+        \end{block}
     \end{columns}
 
 \end{frame}
@@ -227,7 +235,7 @@ Research fellow, Nethermind
 
 \begin{frame}[fragile]{Step 3: Create model class}
     \begin{columns}
-        \column{0.5\textwidth}
+        \column{0.45\textwidth}
 
         \begin{block}{Code Structure}
             \begin{lstlisting}[language=Python, basicstyle=\footnotesize, xleftmargin=-16pt, columns=fullflexible]
@@ -240,17 +248,17 @@ Research fellow, Nethermind
         for i in range(100):
           agnt = TestAgent(i, self)
           self.schedule.add(agnt)
-        self.datacollector = mesa.DataCollector(
+        self.dc = mesa.DataCollector(
           agent_reporters={"x": "attr_X"})
         
       def step(self):
         self.add_remove_agents()
         self.schedule.step()
-        self.datacollector.collect(self)
+        self.dc.collect(self)
     \end{lstlisting}
         \end{block}
 
-        \column{0.5\textwidth}
+        \column{0.45\textwidth}
         \begin{itemize}
             \item Subclass \textit{mesa.Model}
             \item Create an initial state
@@ -258,7 +266,10 @@ Research fellow, Nethermind
             \item Assign agents to a scheduler
             \item Create data collectors
         \end{itemize}
-
+        \bigskip
+        \begin{block}{Exercise}
+            Write pseudo-code for the model class.
+        \end{block}
     \end{columns}
 
 \end{frame}
@@ -275,9 +286,11 @@ Research fellow, Nethermind
         e.g. 5\% inflation rate on token, 15\% node commission
         \item Statistical estimation (minimize distance from real data)\\
         e.g. monthly new users, daily ETH prices
-        \item Meta-modeling
     \end{itemize}
     For a list of data sources and tools for on-chain analytics, see \href{https://sites.google.com/view/mingxuanhe/resources}{\underline{sites.google.com/view/mingxuanhe/resources}}
+    \begin{block}{Exercise}
+        For each method, list 2 or more parameters.
+    \end{block}
 \end{frame}
 
 \begin{frame}{Step 5: Simulation}
@@ -290,8 +303,12 @@ Research fellow, Nethermind
     \begin{itemize}
         \item Run multiple batches on different random seeds and aggregate (Monte Carlo)
         \item Change the protocol parameters to explore ``parallel universes"
-        \item Disaster simulation: large drop in prices, large withdrawl of liquidity, etc.
+        \item Disaster simulation: price drops, hacks, bank runs, etc.
     \end{itemize}
+    \begin{block}{Exercise}
+        List 3 or more variables to track during simulation.
+    \end{block}
+    
 \end{frame}
 
 
@@ -304,12 +321,13 @@ Research fellow, Nethermind
         \item Network visualization
         \item User-settable parameter (slider / choice / number input)
     \end{itemize}
-
+    \bigskip
+    Here's \href{https://colab.research.google.com/github/projectmesa/mesa/blob/main/docs/tutorials/visualization_tutorial.ipynb}{\underline{a demo}} for mesa visualization using the Boltzmann Wealth Model.
 
 \end{frame}
 
 
-\section{Demo}
+\section{Example}
 
 \begin{frame}{Example: An ABM for Uniswap V2 AMM}
     \begin{itemize}
@@ -328,8 +346,8 @@ Research fellow, Nethermind
 
 \begin{frame}{Extensions to the Toy Model}
     \begin{itemize}
-        \item Different types of traders: arbitrageurs, speculators, noise traders - each type has a different trading pattern in response to state variables
-        \item Multi-pool model: Pool competition, triangle arbitrage,
+        \item Different types of traders: arbitrageurs, speculators, noise traders - each type has a different buy/sell pattern
+        \item Multi-pool model: Pool competition, triangle arbitrage,...
     \end{itemize}
 \end{frame}
 
