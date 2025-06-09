@@ -1,5 +1,6 @@
-# ETHChicago Talks
-Here are the relevant materials for my talk and workshop at ETHChicago. I also included my slides for the LSD talk at Stanford SBC in early September.
+# Mingxuan He's Talks
+This repo has all relevant materials for my technical talks and workshops. There are other talks listed here: https://www.mingxuanhe.xyz/talks
+
 ## Agent-Based Simulations for Protocol Design, Tokenomics, and Risk Analysis (Workshop)
 [Slides](./ABM/ABM_slides.pdf)
 
